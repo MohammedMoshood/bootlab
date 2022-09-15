@@ -37,8 +37,8 @@ const Sidebar = () => {
         </ProfileDiv>
 
         <SideMenuDiv>
-          {SidebarData.map((item) => {
-            return <MenuItem {...item}></MenuItem>;
+          {SidebarData.map((item , index) => {
+            return <MenuItem key={index} {...item}></MenuItem>;
           })}
         </SideMenuDiv>
       </SidebarContainer>

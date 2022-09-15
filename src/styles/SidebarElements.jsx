@@ -3,12 +3,12 @@ import styled from "styled-components";
 export const OverallContainer = styled.aside`
   padding: 10px;
   width: 17%;
-  background: white;
+  /* background: pink; */
   height: 100%;
   z-index: 999;
   top: 0;
   color: #0f1322;
-  position: fixed;
+  position: absolute;
   transition: 0.6s ease-in-out;
   opacity: ${({ isOpen }) => (isOpen ? "100%" : "0")};
   left: ${({ isOpen }) => (isOpen ? "0" : "-100%")};

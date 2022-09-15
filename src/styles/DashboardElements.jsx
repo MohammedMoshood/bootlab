@@ -13,7 +13,7 @@ export const DashboardMain = styled.main`
   border-top-left-radius: ${({ isOpen }) => (isOpen ? "100px" : "0")};
 `;
 export const DashboardContainer = styled.div`
-  width: ${({ isOpen }) => (isOpen ? "85%" : "100%")};
+  /* width: ${({ isOpen }) => (isOpen ? "85%" : "100%")}; */
   display: flex;
   flex-direction: column;
   height: 110vh;
@@ -21,14 +21,12 @@ export const DashboardContainer = styled.div`
 `;
 
 export const UpperDiv = styled.div`
-  width: ${({ isOpen }) => (isOpen ? "78vw" : "100%")};
   transition: 0.7s ease;
   display: flex;
   height: 65vh;
   padding: 10px;
 `;
 export const LowerDiv = styled.div`
-  width: ${({ isOpen }) => (isOpen ? "78vw" : "100%")};
   transition: 0.7s ease;
   height: 45vh;
   padding: 10px;
@@ -232,7 +230,7 @@ export const EngageP = styled.p`
 `;
 
 export const MiniContainer = styled.div`
-transition: 0.7s ease;
+  transition: 0.7s ease;
   padding: 30px;
   background: white;
   height: 12rem;
@@ -240,7 +238,7 @@ transition: 0.7s ease;
   border-radius: 24px;
   color: #0f1322;
   position: relative;
-  margin: ${({isOpen})=>isOpen ? "0 30px" : "0 70px"} ;
+  margin: ${({ isOpen }) => (isOpen ? "0 30px" : "0 70px")};
 `;
 export const MiniIconDiv = styled.div`
   display: grid;

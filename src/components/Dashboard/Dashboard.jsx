@@ -11,20 +11,23 @@ import Activity from "./ActivityTab/Activity";
 import { FaBars } from "react-icons/fa";
 import { useGlobalContext } from "../../context";
 
-const MenuStyle = { cursor: "pointer" , top:"10px" , position:"absolute" , left:"10px" }
+const MenuStyle = {
+  cursor: "pointer",
+  top: "10px",
+  position: "absolute",
+  left: "10px",
+};
 
-const Dashboard = () =>{
-  
+const Dashboard = () => {
   const { isOpen, toggleOpen } = useGlobalContext();
   return (
     <DashboardMain isOpen={isOpen}>
-    {!isOpen &&  <FaBars onClick={toggleOpen} style={MenuStyle} size="36"  /> } 
-     
       <DashboardContainer isOpen={isOpen}>
-        <UpperDiv isOpen={isOpen} >
+        {!isOpen && <FaBars onClick={toggleOpen} style={MenuStyle} size="36" />}
+        <UpperDiv isOpen={isOpen}>
           <Performance isOpen={isOpen} />
           <Activity isOpen={isOpen} />
-        </UpperDiv >
+        </UpperDiv>
         <LowerDiv isOpen={isOpen}>
           <Engagement isOpen={isOpen} />
         </LowerDiv>

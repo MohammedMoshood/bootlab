@@ -13,8 +13,8 @@ const Engagement = () => {
         processes</EngageP>
       </EngageDiv>
       <StatusCompDiv>
-      {EngagementData.map((item)=>{
-      return <StatusComp {...item} key={item.id}/>
+      {EngagementData.map((item )=>{
+      return <StatusComp  {...item} key={item.id}/>
      })}
       </StatusCompDiv>
      
