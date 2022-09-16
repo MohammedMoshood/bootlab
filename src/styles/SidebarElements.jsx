@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const OverallContainer = styled.aside`
+  position: fixed;
   padding: 10px;
   width: 17%;
   /* background: pink; */
@@ -8,7 +9,6 @@ export const OverallContainer = styled.aside`
   z-index: 999;
   top: 0;
   color: #0f1322;
-  position: absolute;
   transition: 0.6s ease-in-out;
   opacity: ${({ isOpen }) => (isOpen ? "100%" : "0")};
   left: ${({ isOpen }) => (isOpen ? "0" : "-100%")};

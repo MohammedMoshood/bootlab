@@ -12,10 +12,10 @@ const StatusComp = ({ icon, span, rate }) => {
   const {isOpen } = useGlobalContext()
   return (
     <MiniContainer isOpen={isOpen}>
-      <MiniIconDiv>{icon}</MiniIconDiv>
-      <SpanText>{span}</SpanText>
+      <MiniIconDiv isOpen={isOpen}>{icon}</MiniIconDiv>
+      <SpanText isOpen={isOpen}>{span}</SpanText>
       {/* needs to be a state , so it can be properly controlled dynamically */}
-      <Rate>{rate} {<FaArrowUp color="green" size="30" style={{background:"none"}} /> }</Rate>
+      <Rate isOpen={isOpen}>{rate} {<FaArrowUp color="green" style={{background:"none"}} /> }</Rate>
     </MiniContainer>
   );
 };

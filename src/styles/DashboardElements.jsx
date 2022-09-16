@@ -3,34 +3,39 @@ import styled from "styled-components";
 
 export const DashboardMain = styled.main`
   background-color: #f3f1ef;
-
+  height: 100vh;
   width: 100%;
-  padding: ${({ isOpen }) => (isOpen ? "40px 40px" : "40px")};
-  display: grid;
+  padding: 40px;
   transition: 0.7s ease;
-
   border-bottom-left-radius: ${({ isOpen }) => (isOpen ? "100px" : "0")};
   border-top-left-radius: ${({ isOpen }) => (isOpen ? "100px" : "0")};
 `;
 export const DashboardContainer = styled.div`
-  /* width: ${({ isOpen }) => (isOpen ? "85%" : "100%")}; */
-  display: flex;
-  flex-direction: column;
-  height: 110vh;
+  width: 100%;
+  height: 100%;
   transition: 0.7s ease;
+  @media screen and (max-width: 2000px) {
+  }
 `;
 
 export const UpperDiv = styled.div`
+  width: 100%;
   transition: 0.7s ease;
   display: flex;
-  height: 65vh;
+  height: 60%;
+  margin: 0 auto;
   padding: 10px;
+  @media screen and (max-width: 2000px) {
+  }
 `;
 export const LowerDiv = styled.div`
+  width: 100%;
   transition: 0.7s ease;
-  height: 45vh;
+  height: 40%;
   padding: 10px;
   margin-top: 10px;
+  @media screen and (max-width: 2000px) {
+  }
 `;
 
 //PerformanceTab
@@ -100,6 +105,7 @@ export const PercentText = styled.h1`
   background: none;
 `;
 export const PerformanceList = styled.div`
+height: 100%;
   margin: 30px;
   background: none;
 `;
@@ -107,7 +113,7 @@ export const ActionDiv = styled.div`
   display: flex;
   padding: 5px 0px;
   margin: 10px;
-  height: 60px;
+  height: 10%;
   align-items: center;
 
   background: none;
@@ -191,42 +197,55 @@ export const NavItem = styled.button`
 //Engagement Tab
 
 export const EngagementTab = styled.div`
-  /* width: 100%; */
   display: flex;
   border-radius: 24px;
   background-color: #d9baa6;
-  height: 100%;
+  justify-content: space-between;
+  height: 90%;
   align-items: center;
   padding: 30px;
+  width: 100%;
+  @media screen and (max-width: 1900px) {
+  }
 `;
 
 export const EngageDiv = styled.div`
-  width: 14rem;
+  padding: 5px;
+  width: ${({ isOpen }) => (isOpen ? "15%" : "14rem")};
   border-radius: 24px;
   color: #0f1322;
-  background: none;
+  height: ${({ isOpen }) => (isOpen ? "8rem" : "14rem")};
 `;
 
 export const StatusCompDiv = styled.div`
   display: flex;
-  flex: 4;
+  width: 65%;
 `;
 
 export const EngageText = styled.h5`
+  transition: 0.3s ease;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  font-size: 30px;
+  font-size:30px;
   background: none;
+  @media screen and (max-width: 1900px) {
+    font-size: ${({ isOpen }) => (isOpen ? "20px" : "30px")};
+  }
+
 `;
 
 export const EngageP = styled.p`
   background: none;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  margin-top: 50px;
+  margin-top: ${({ isOpen }) => (isOpen ? "10px" : "50px")};
+  font-size: 18px;
   width: 71%;
   line-height: 1.5;
   word-wrap: break-word;
+  @media screen and (max-width: 1900px) {
+    font-size: ${({ isOpen }) => (isOpen ? "12px" : "18px")};
+  }
 `;
 
 export const MiniContainer = styled.div`
@@ -234,48 +253,74 @@ export const MiniContainer = styled.div`
   padding: 30px;
   background: white;
   height: 12rem;
-  width: 12rem;
+  width: 14rem;
   border-radius: 24px;
   color: #0f1322;
   position: relative;
-  margin: ${({ isOpen }) => (isOpen ? "0 30px" : "0 70px")};
+  margin: ${({ isOpen }) => (isOpen ? "0 30px" : "0 50px")};
+  @media screen and (max-width: 1900px) {
+    height: ${({ isOpen }) => (isOpen ? "8rem" : "12rem")};
+    width: 25%;
+    margin: ${({ isOpen }) => (isOpen ? "0 5px" : "0 20px 0 0")};
+  }
 `;
 export const MiniIconDiv = styled.div`
   display: grid;
+  transition: 0.7s ease;
+
   place-items: center;
   color: white;
   background: #f74f2a;
   position: absolute;
   width: 3.5rem;
+
   height: 3.5rem;
   border-radius: 12px;
-  top: -25px;
-  left: 30px;
+  top: ${({ isOpen }) => (isOpen ? "-20px" : "-25px")};
+  left: ${({ isOpen }) => (isOpen ? "15px" : "30px")};
+
+  @media screen and (max-width: 1900px) {
+  }
 `;
 export const SpanText = styled.p`
+  transition: 0.7s ease;
+
   background: none;
   padding-top: 20px;
+  font-size: 18px;
+
   font-weight: 700;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  @media screen and (max-width: 1900px) {
+    font-size: ${({ isOpen }) => (isOpen ? "12px" : "18px")};
+  }
 `;
 export const Rate = styled.p`
+  transition: 0.7s ease;
+
   background: none;
+  text-align: center;
+  align-items: center;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-size: 36px;
-  padding-top: 25px;
+  display: flex;
+  padding-top: ${({ isOpen }) => (isOpen ? "12px" : "25px")};
   font-weight: 700;
+  @media screen and (max-width: 1900px) {
+    font-size: ${({ isOpen }) => (isOpen ? "20px" : "36px")};
+  }
 `;
 export const MetricsDiv = styled.div`
+  width: 16%;
   padding: 30px;
   background: #95cfd9;
   height: 12rem;
-  width: 12rem;
   font-size: 30px;
   border-radius: 24px;
   color: #0f1322;
-  margin: 60px;
+  /* margin: 60px; */
 `;
 export const MetricsText = styled.p`
   background: none;
